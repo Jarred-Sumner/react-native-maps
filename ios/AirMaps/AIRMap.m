@@ -173,6 +173,18 @@ const CGFloat AIRMapZoomBoundBuffer = 0.01;
 
 #pragma mark Accessors
 
+- (CLLocationCoordinate2D)userLocationCoordinate
+{
+    if (!_locationManager) {
+            _locationManager = [CLLocationManager new];
+            if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+                [_locationManager requestWhenInUseAuthorization];
+            }
+        }
+    }
+    return self.userLocation.coordinate;
+}
+
 - (void)setShowsUserLocation:(BOOL)showsUserLocation
 {
     if (self.showsUserLocation != showsUserLocation) {

@@ -63,6 +63,7 @@ RCT_EXPORT_MODULE()
     return map;
 }
 
+RCT_EXPORT_VIEW_PROPERTY(userLocationCoordinate, CLLocationCoordinate2D)
 RCT_EXPORT_VIEW_PROPERTY(showsUserLocation, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(followsUserLocation, BOOL)
 RCT_EXPORT_VIEW_PROPERTY(showsPointsOfInterest, BOOL)
